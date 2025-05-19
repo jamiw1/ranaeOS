@@ -151,10 +151,10 @@ fn test_println_many() {
 
 #[test_case]
 fn test_println_output() {
-    use core::fmt::write;
+    use core::fmt::Write;
     use x86_64::instructions::interrupts;
 
-    let s = "Some test string that fits on a single line";
+    let s = "test test test string on one line!";
     interrupts::without_interrupts(|| {
         let mut writer = WRITER.lock();
         writeln!(writer, "\n{}", s).expect("writeln failed");
@@ -163,7 +163,4 @@ fn test_println_output() {
             assert_eq!(char::from(screen_char.ascii_character), c);
         }
     });
-
-    println!("{}", s);
-
 }
