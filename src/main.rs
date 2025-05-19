@@ -5,35 +5,26 @@
 #![reexport_test_harness_main = "test_main"]
 
 use core::panic::PanicInfo;
-use ranaeOS::println;
+use ranaeOS::{hlt_loop, println};
 
 #[unsafe(no_mangle)]
 pub extern "C" fn _start() -> ! {
     println!("starting ranaeOS...");
-    println!("this may take a while...");
+    println!("initializing...");
     ranaeOS::init();
-
-    fn stack_overflow() {
-        stack_overflow();
-    }
-    stack_overflow();
-
-    println!("initialized...");
-
-
-    println!("this is past breakpoint, meaning it didn't crash!");
+    println!("initialized!");
 
     #[cfg(test)]
     test_main();
 
     println!("welcome to ranaeOS!");
-    loop {}
+    hlt_loop();
 }
 #[cfg(not(test))]
 #[panic_handler]
 fn panic(info: &PanicInfo) -> ! {
     println!("{}", info);
-    loop {}
+    hlt_loop();
 }
 
 #[cfg(test)]
