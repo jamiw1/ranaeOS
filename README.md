@@ -7,7 +7,7 @@ i'll still probably be somewhat active though, so feel free to submit some issue
 requires a nightly build of Rust and QEMU for running
 
 ## to build:
-run `rustup component add rust-src llvm-tools-preview --toolchain nightly-x86_64-unknown-none`
+run `rustup component add rust-src llvm-tools-preview --toolchain nightly-x86_64-windows-msvc` DO NOT FORGET TO SET IT FOR YOUR TOOLCHAIN! this is the windows command!
 > only do this once! gets necessary things for the future, like the source to compile and tools, plus nightly build
 
 run `cargo install bootimage`
