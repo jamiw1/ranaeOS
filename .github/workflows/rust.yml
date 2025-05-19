@@ -21,6 +21,8 @@ jobs:
         platforms: "x86_64"
     - name: Get Cargo target
       run: rustup component add rust-src --toolchain nightly-x86_64-unknown-linux-gnu
+    - name: Install bootimage
+      run: cargo install bootimage
     - uses: actions/checkout@v4
     - name: Build
       run: cargo build --verbose
