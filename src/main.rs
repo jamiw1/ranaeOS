@@ -10,7 +10,7 @@ use ranaeOS::{hlt_loop, println};
 #[unsafe(no_mangle)]
 pub extern "C" fn _start() -> ! {
     println!("starting ranaeOS...");
-    println!("initializing...");
+    println!("began initializing...");
     ranaeOS::init();
     println!("initialized!");
 
