@@ -13,4 +13,5 @@ run `cargo install bootimage`
 
 you now have the necessary tools, now you can do `cargo run` to try it out or use `cargo bootimage --release` to build a `bootimage-ranaeOS.bin` located in `target/x64_64-ranaeOS/release`
 
-use QEMU or similar virtual machine tools to boot off the `.bin` file, or flash it onto a USB drive to test on real hardware
+use QEMU or similar virtual machine tools to boot off the `.bin` file, or flash it onto a USB drive to test on real hardware.
+for example, using QEMU (on Windows) `qemu-system-x86_64 -drive format=raw,file=path\to\bootimage-ranaeOS.bin` would be the command used to run
