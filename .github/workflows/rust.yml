@@ -18,7 +18,7 @@ jobs:
     - name: Download and build QEMU
       uses: arceos-org/setup-qemu@v0.1
       with:
-        version: "v9.2.1"
+        version: "9.2.1"
     - uses: actions/checkout@v4
     - name: Build
       run: cargo build --verbose
