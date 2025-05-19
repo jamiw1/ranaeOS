@@ -17,8 +17,6 @@ jobs:
     steps:
     - name: Setup QEMU
       uses: docker/setup-qemu-action@v3.6.0
-      with:
-        platforms: "linux/amd64"
     - name: Get Cargo target
       run: rustup component add rust-src llvm-tools-preview --toolchain nightly-x86_64-unknown-linux-gnu
     - name: Install bootimage
