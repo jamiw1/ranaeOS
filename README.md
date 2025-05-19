@@ -1,4 +1,6 @@
-custom made x86_64 OS built almost entirely in Rust.
+# ranaeOS
+### a custom made x86_64 OS made almost entirely in Rust.
+currently very early in development, direction is unsure and slow.
 not guarenteeing support as this is a hobby project, and i probably don't have *that* much time to actually work on this.
 i'll still probably be somewhat active though, so feel free to submit some issues or pull requests and i might add or merge them
 
