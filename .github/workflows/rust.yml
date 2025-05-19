@@ -15,10 +15,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Download and build QEMU
-      uses: arceos-org/setup-qemu@v0.1
+    - name: Setup QEMU
+      uses: docker/setup-qemu-action@v3.6.0
       with:
-        version: "9.2.1"
+        platforms: "x86_64"
     - uses: actions/checkout@v4
     - name: Build
       run: cargo build --verbose
