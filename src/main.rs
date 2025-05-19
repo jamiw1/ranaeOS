@@ -11,10 +11,22 @@ use ranaeOS::println;
 pub extern "C" fn _start() -> ! {
     println!("starting ranaeOS...");
     println!("this may take a while...");
-    
+    ranaeOS::init();
+
+    fn stack_overflow() {
+        stack_overflow();
+    }
+    stack_overflow();
+
+    println!("initialized...");
+
+
+    println!("this is past breakpoint, meaning it didn't crash!");
+
     #[cfg(test)]
     test_main();
 
+    println!("welcome to ranaeOS!");
     loop {}
 }
 #[cfg(not(test))]
