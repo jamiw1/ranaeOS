@@ -1,2 +1,6 @@
 *.err
 build/
+
+# ignore other OS files
+.DS_Store
+Thumbs.db
