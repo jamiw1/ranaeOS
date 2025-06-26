@@ -1,0 +1,23 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup QEMU
+      uses: docker/setup-qemu-action@v3.6.0
+      with:
+        platforms: x86_64
+          
+    - name: Debug
+      run: ./debug.sh
