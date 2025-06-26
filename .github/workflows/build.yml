@@ -19,5 +19,8 @@ jobs:
       with:
         platforms: x86_64
           
-    - name: Debug
-      run: ./debug.sh
+    - name: Make
+      run: make
+
+    - name: Run VM
+      run: qemu-system-x86_64 -fda build/main_floppy.img
