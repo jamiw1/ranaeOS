@@ -18,6 +18,10 @@ jobs:
       uses: docker/setup-qemu-action@v3.6.0
       with:
         platforms: x86_64
+    - name: Set up NASM
+      uses: ilammy/setup-nasm@v1.5.1
+      with:
+        platform: linux
           
     - name: Make
       run: make
